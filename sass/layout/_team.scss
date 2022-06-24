@@ -1,0 +1,72 @@
+/* Команда */
+.team {
+  background-color: $secondary-btn-color;
+  @media screen and (max-width: 1199px) {
+    padding: 60px 0;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 94px 0;
+    margin: 0 auto;
+  }
+}
+.team__title {
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+}
+.container__list {
+  @media screen and (max-width: 767px) {
+    display: block;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+
+    margin-left: calc(30px * -1);
+    margin-top: calc(30px * -1);
+  }
+}
+.team-list__item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  text-align: center;
+  background-color: $primary-bgc;
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 4 * 30px) / 4);
+    margin: 15px;
+  }
+}
+.team-list__item {
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.team-container {
+  padding: 30px 32px;
+}
+.team-container__title,
+.team-container__text {
+  font-size: 16px;
+  line-height: 1.18;
+}
+.team-container__title {
+  margin-bottom: 10px;
+  color: $secondary-color-text;
+  font-weight: 500;
+}
+.team-container__text {
+  margin-bottom: 16px;
+}

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <title>Портфолио</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/portfolio.min.css" />
+  </head>
+  <body>
+    <!--Шапка сайта-->
+    <header class="header">
+      <div class="container header__container">
+        <a class="logo header__logo" href="./index.html">
+          <span class="logo__part">Web</span>Studio</a
+        >
+        <button
+          type="button"
+          class="menu-wrap__button"
+          aria-controls="menu-wrap"
+          aria-expanded="false"
+          data-menu-button
+        >
+          <svg
+            class="menu-wrap__icon"
+            aria-label="Кнопка переключения мобильного меню"
+            width="40"
+            height="40"
+          >
+            <use class="menu-wrap__on" href="./images/sprite.svg#menu"></use>
+            <use class="menu-wrap__off" href="./images/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <div class="menu-wrap" id="menu-wrap" data-menu>
+          <nav class="site-nav">
+            <ul class="nav__list list">
+              <li class="nav__item">
+                <a class="link nav__link header__link" href="./index.html">Студия</a>
+              </li>
+              <li class="nav__item">
+                <a class="link nav__link header__link nav__link--current" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="nav__item">
+                <a class="link nav__link header__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="contacts list">
+            <li class="contacts__item">
+              <a class="link contacts__link header__link" href="mailto:info@devstudio.com">
+                <svg class="contacts__icon" width="16" height="12">
+                  <use href="./images/sprite.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="contacts__item">
+              <a
+                class="link contacts__link header__link contacts__link--biggest"
+                href="tel:+380961111111"
+              >
+                <svg class="contacts__icon" width="10" height="16">
+                  <use href="./images/sprite.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+          <ul class="networks-list list">
+            <li class="networks-list__item">
+              <a
+                class="networks-list__link"
+                href=""
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                aria-label="Cсылка на Instagramm"
+                >Instagram</a
+              >
+            </li>
+            <li class="networks-list__item">
+              <a
+                class="networks-list__link"
+                href=""
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                aria-label="Cсылка на Twitter"
+                >Twitter</a
+              >
+            </li>
+            <li class="networks-list__item">
+              <a
+                class="networks-list__link"
+                href=""
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                aria-label="Cсылка на Facebook"
+                >Facebook</a
+              >
+            </li>
+            <li class="networks-list__item">
+              <a
+                class="networks-list__link"
+                href=""
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                aria-label="Cсылка на LinkedIn"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="filter">
+        <!-- Залоговки для семантики -->
+        <div class="filter-container container">
+          <h1 class="visually-hidden">Наши проекты</h1>
+          <!-- Кнопки фильтра -->
+          <ul class="filter-list list filter-container__list">
+            <li class="filter-list__item">
+              <button class="filter-list__button" type="button">Все</button>
+            </li>
+            <li class="filter-list__item">
+              <button class="filter-list__button" type="button">Веб-сайты</button>
+            </li>
+            <li class="filter-list__item">
+              <button class="filter-list__button" type="button">Приложения</button>
+            </li>
+            <li class="filter-list__item">
+              <button class="filter-list__button" type="button">Дизайн</button>
+            </li>
+            <li class="filter-list__item">
+              <button class="filter-list__button" type="button">Маркетинг</button>
+            </li>
+          </ul>
+          <!-- Примеры работ -->
+          <ul class="project list">
+            <li class="project__item">
+              <a class="project__link link" href="">
+                <div class="project-overlay">
+                  <img
+                    class="project-overlay__img"
+                    srcset="
+                      ./images/tehno-370.jpg 370w,
+                      ./images/tehno-354.jpg 354w,
+                      ./images/tehno-450.jpg 450w,
+                      ./images/tehno-740.jpg 740w,
+                      ./images/tehno-708.jpg 708w,
+                      ./images/tehno-900.jpg 900w
+                    "
+                    sizes="(min-width: 2400px) 740px, (min-width: 1536px) 708px, (min-width: 1200px) 370px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/tehno-354.jpg"
+                    alt="ноутбук с открытым вебсайтом"
+                    width="450"
+                  />
+                  <p class="project-overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
+                    или частном лице.
+                  </p>
+                </div>
+                <div class="project-content project-content--high">
+                  <h2 class="project-content__title">Технокряк</h2>
+                  <p class="project-content__text">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link link" href="">
+                <div class="project-overlay">
+                  <img
+                    class="project-overlay__img"
+                    srcset="
+                      ./images/poster-370.jpg 370w,
+                      ./images/poster-354.jpg 354w,
+                      ./images/poster-450.jpg 450w,
+                      ./images/poster-740.jpg 740w,
+                      ./images/poster-708.jpg 708w,
+                      ./images/poster-900.jpg 900w
+                    "
+                    sizes="(min-width: 2400px) 740px, (min-width: 1536px) 708px, (min-width: 1200px) 370px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/poster-354.jpg"
+                    alt="два баскетболиста боятся за мяч"
+                    width="450"
+                  />
+
+                  <p class="project-overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
+                    или частном лице.
+                  </p>
+                </div>
+                <div class="project-content">
+                  <h2 class="project-content__title">Постер New Orlean vs Golden Star</h2>
+                  <p class="project-content__text">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link link" href="">
+                <div class="project-overlay">
+                  <img
+                    class="project-overlay__img"
+                    srcset="
+                      ./images/seafood-370.jpg 370w,
+                      ./images/seafood-354.jpg 354w,
+                      ./images/seafood-450.jpg 450w,
+                      ./images/seafood-740.jpg 740w,
+                      ./images/seafood-708.jpg 708w,
+                      ./images/seafood-900.jpg 900w
+                    "
+                    sizes="(min-width: 2400px) 740px, (min-width: 1536px) 708px, (min-width: 1200px) 370px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/seafood-354.jpg"
+                    alt="название ресторана на фоне рыбы"
+                    width="450"
+                  />
+                  <p class="project-overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
+                    или частном лице.
+                  </p>
+                </div>
+                <div class="project-content">
+                  <h2 class="project-content__title">Ресторан Seafood</h2>
+                  <p class="project-content__text">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link link" href="">
+                <div class="project-overlay">
+                  <img
+                    class="project-overlay__img"
+                    srcset="
+                      ./images/headphones-370.jpg 370w,
+                      ./images/headphones-354.jpg 354w,
+                      ./images/headphones-450.jpg 450w,
+                      ./images/headphones-740.jpg 740w,
+                      ./images/headphones-708.jpg 708w,
+                      ./images/headphones-900.jpg 900w
+                    "
+                    sizes="(min-width: 2400px) 740px, (min-width: 1536px) 708px, (min-width: 1200px) 370px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/headphones-354.jpg"
+                    alt="черные наушники на белом фоне"
+                    width="450"
+                  />
+                  <p class="project-overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
+                    или частном лице.
+                  </p>
+                </div>
+                <div class="project-content">
+                  <h2 class="project-content__title">Проект Prime</h2>
+                  <p class="project-content__text">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link link" href="">
+                <div class="project-overlay">
+                  <img
+                    class="project-overlay__img"
+                    srcset="
+                      ./images/box-370.jpg 370w,
+                      ./images/box-354.jpg 354w,
+                      ./images/box-450.jpg 450w,
+                      ./images/box-740.jpg 740w,
+                      ./images/box-708.jpg 708w,
+                      ./images/box-900.jpg 900w
+                    "
+                    sizes="(min-width: 2400px) 740px, (min-width: 1536px) 708px, (min-width: 1200px) 370px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/box-354.jpg"
+                    alt="две коробки на белом фоне"
+                    width="450"
+                  />
+                  <p class="project-overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
+                    или частном лице.
+                  </p>
+                </div>
+                <div class="project-content">
+                  <h2 class="project-content__title">Проект Boxes</h2>
+                  <p class="project-content__text">Приложение</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link link" href=""
+                ><div class="project-overlay">
+                  <img
+                    class="project-overlay__img"
+                    srcset="
+                      ./images/comp-370.jpg 370w,
+                      ./images/comp-354.jpg 354w,
+                      ./images/comp-450.jpg 450w,
+                      ./images/comp-740.jpg 740w,
+                      ./images/comp-708.jpg 708w,
+                      ./images/comp-900.jpg 900w
+                    "
+                    sizes="(min-width: 2400px) 740px, (min-width: 1536px) 708px, (min-width: 1200px) 370px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/comp-354.jpg"
+                    alt="монитор компьютера"
+                    width="450"
+                  />
+
+                  <p class="project-overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
+                    или частном лице.
+                  </p>
+                </div>
+                <div class="project-content">
+                  <h2 class="project-content__title">Inspiration has no Borders</h2>
+                  <p class="project-content__text">Веб-сайт</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link link" href="">
+                <div class="project-overlay">
+                  <img
+                    class="project-overlay__img"
+                    srcset="
+                      ./images/magazine-370.jpg 370w,
+                      ./images/magazine-354.jpg 354w,
+                      ./images/magazine-450.jpg 450w,
+                      ./images/magazine-740.jpg 740w,
+                      ./images/magazine-708.jpg 708w,
+                      ./images/magazine-900.jpg 900w
+                    "
+                    sizes="(min-width: 2400px) 740px, (min-width: 1536px) 708px, (min-width: 1200px) 370px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/magazine-354.jpg"
+                    alt="разворот журнала"
+                    width="450"
+                  />
+
+                  <p class="project-overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
+                    или частном лице.
+                  </p>
+                </div>
+                <div class="project-content">
+                  <h2 class="project-content__title">Издание Limited Edition</h2>
+                  <p class="project-content__text">Дизайн</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link link" href="">
+                <div class="project-overlay">
+                  <img
+                    class="project-overlay__img"
+                    srcset="
+                      ./images/lab-370.jpg 370w,
+                      ./images/lab-354.jpg 354w,
+                      ./images/lab-450.jpg 450w,
+                      ./images/lab-740.jpg 740w,
+                      ./images/lab-708.jpg 708w,
+                      ./images/lab-900.jpg 900w
+                    "
+                    sizes="(min-width: 2400px) 740px, (min-width: 1536px) 708px, (min-width: 1200px) 370px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/lab-354.jpg"
+                    alt="белая бирка с черной надписью"
+                    width="450"
+                  />
+                  <p class="project-overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
+                    или частном лице.
+                  </p>
+                </div>
+                <div class="project-content">
+                  <h2 class="project-content__title">Проект LAB</h2>
+                  <p class="project-content__text">Маркетинг</p>
+                </div>
+              </a>
+            </li>
+            <li class="project__item">
+              <a class="project__link link" href="">
+                <div class="project-overlay">
+                  <img
+                    class="project-overlay__img"
+                    srcset="
+                      ./images/business-370.jpg 370w,
+                      ./images/business-354.jpg 354w,
+                      ./images/business-450.jpg 450w,
+                      ./images/business-740.jpg 740w,
+                      ./images/business-708.jpg 708w,
+                      ./images/business-900.jpg 900w
+                    "
+                    sizes="(min-width: 2400px) 740px, (min-width: 1536px) 708px, (min-width: 1200px) 370px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 1200px) 270px, (min-width: 960px) 900px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                    src="./images/business-354.jpg"
+                    alt="работа на ноутбуке"
+                    width="450"
+                  />
+                  <p class="project-overlay__text">
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
+                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
+                    или частном лице.
+                  </p>
+                </div>
+                <div class="project-content">
+                  <h2 class="project-content__title">Growing Business</h2>
+                  <p class="project-content__text">Приложение</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <!--Подвал-->
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="adress">
+          <a href="./index.html" class="logo footer__logo"
+            ><span class="logo__label">Web</span>Studio
+          </a>
+          <address class="adress-wrap">
+            <ul class="adress-list list">
+              <li><p class="adress-list__text">г. Киев, пр-т Леси Украинки, 26</p></li>
+              <li>
+                <a class="adress-list__link link" href="mailto:info@example.com"
+                  >info@example.com</a
+                >
+              </li>
+              <li>
+                <a class="adress-list__link link" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="networks-container">
+          <p class="container__text">присоединяйтесь</p>
+          <ul class="networks list">
+            <li class="networks__item">
+              <a
+                class="networks__link networks__link--dark"
+                href=""
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                aria-label="Cсылка на Instagramm"
+                ><svg class="networks__icon" width="20" height="20">
+                  <use href="./images/sprite.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="networks__item">
+              <a
+                class="networks__link networks__link--dark"
+                href=""
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                aria-label="Cсылка на Twitter"
+                ><svg class="networks__icon" width="20" height="20">
+                  <use href="./images/sprite.svg#twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="networks__item">
+              <a
+                class="networks__link networks__link--dark"
+                href=""
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                aria-label="Cсылка на Facebook"
+                ><svg class="networks__icon" width="20" height="20">
+                  <use href="./images/sprite.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="networks__item">
+              <a
+                class="networks__link networks__link--dark"
+                href=""
+                target="_blank"
+                rel="noopener nofollow noreferrer"
+                aria-label="Cсылка на Linkedin"
+                ><svg class="networks__icon" width="20" height="20">
+                  <use href="./images/sprite.svg#linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="subscribe-container">
+          <p class="container__text">Подпишитесь на рассылку</p>
+          <form class="subscribe-form" autocomplete="off">
+            <label class="subscribe-form__label">
+              <input class="subscribe-form__input" type="email" name="mail" placeholder="E-mail" />
+            </label>
+            <button class="button subscribe-form__button" type="submit">
+              Подписаться
+              <svg class="subscribe-form__icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/menu.js"></script>
+  </body>
+</html>

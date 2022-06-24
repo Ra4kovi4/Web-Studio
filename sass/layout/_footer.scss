@@ -1,0 +1,136 @@
+/* Оформление подвала */
+.footer {
+  margin: 0 auto;
+  background-color: $secondary-bgc;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.footer__container {
+  display: block;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  align-items: baseline;
+}
+.adress {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+.adress-wrap {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 60px;
+  }
+}
+.footer__logo {
+  margin-bottom: 20px;
+
+  color: $secondary-accent-color;
+}
+
+.adress-list__text {
+  font-style: normal;
+  line-height: 1.71;
+  color: $secondary-accent-color;
+}
+.adress-list__link {
+  display: inline-block;
+  font-style: normal;
+  line-height: 1.71;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 9px;
+
+  transition: color 250ms $hover-timing;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.networks-container {
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+  }
+}
+
+.container__text {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  color: rgba(255, 255, 255, 1);
+}
+
+.networks__link--dark {
+  color: $secondary-accent-color;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.subscribe-container {
+  @media screen and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    align-items: center;
+    margin-top: 60px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
+}
+.subscribe-form {
+  display: flex;
+  @media screen and (max-width: 1199px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.subscribe-form__input {
+  padding-left: 16px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: transparent;
+  color: rgba(255, 255, 255, 1);
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+
+  color: rgba(255, 255, 255, 0.6);
+
+  @media screen and (max-width: 1199px) {
+    display: block;
+    min-width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    min-width: 358px;
+  }
+}
+
+.subscribe-form__button {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  @media screen and (max-width: 1199px) {
+    margin: 20px auto 0 auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
+}
+.subscribe-form__icon {
+  margin-left: 10px;
+}
