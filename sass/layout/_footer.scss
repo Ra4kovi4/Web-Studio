@@ -12,8 +12,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: baseline;
   }
-  align-items: baseline;
 }
 .adress {
   @media screen and (max-width: 1199px) {
@@ -89,48 +89,54 @@
 }
 .subscribe-form {
   display: flex;
+  width: 100%;
   @media screen and (max-width: 1199px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
-}
-.subscribe-form__input {
-  padding-left: 16px;
-  padding-bottom: 15px;
-  padding-top: 15px;
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  background-color: transparent;
-  color: rgba(255, 255, 255, 1);
+  .subscribe-form__label {
+    @media screen and (max-width: 767px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 768px) {
+      width: 450px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+    }
+  }
+  .subscribe-form__input {
+    padding-left: 16px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    width: 100%;
 
-  &::placeholder {
-    font-size: 16px;
-    line-height: 1.25;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 1);
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 1.25;
+    }
+
+    color: rgba(255, 255, 255, 0.6);
   }
 
-  color: rgba(255, 255, 255, 0.6);
-
-  @media screen and (max-width: 1199px) {
-    display: block;
-    min-width: 450px;
+  .subscribe-form__button {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    @media screen and (max-width: 1199px) {
+      margin: 20px auto 0 auto;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: 12px;
+    }
   }
-  @media screen and (min-width: 1200px) {
-    min-width: 358px;
+  .subscribe-form__icon {
+    margin-left: 10px;
   }
-}
-
-.subscribe-form__button {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  @media screen and (max-width: 1199px) {
-    margin: 20px auto 0 auto;
-  }
-  @media screen and (min-width: 1200px) {
-    margin-left: 12px;
-  }
-}
-.subscribe-form__icon {
-  margin-left: 10px;
 }

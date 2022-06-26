@@ -8,14 +8,15 @@ body {
   color: $primary-color-text;
   background-color: $primary-bgc;
 }
+
 .container {
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 
-  @media screen and (min-width: 480px) {
-    width: 480px;
+  @media screen and (max-width: 767px) {
+    max-width: 480px;
   }
   @media screen and (min-width: 768px) {
     width: 768px;
