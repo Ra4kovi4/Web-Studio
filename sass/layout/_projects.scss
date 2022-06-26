@@ -61,7 +61,8 @@
   transform: translateY(100%);
   transition: transform 250ms $hover-timing;
 
-  .project__link:hover & {
+  .project__link:hover &,
+  .project__link:focus & {
     transform: translateY(0);
   }
 }
