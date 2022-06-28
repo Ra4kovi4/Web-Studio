@@ -1,22 +1,15 @@
 //Шапка сайта
 .header {
   border-bottom: 1px solid #ececec;
-  background-color: $primary-bgc;
-
-  @media screen and (max-width: 767px) {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 80;
-  }
 }
 .header__container {
   @media screen and (max-width: 767px) {
-    display: flex;
-
+    position: relative;
     padding-top: 16px;
     padding-bottom: 16px;
-    align-items: center;
+
+    display: flex;
+    justify-content: space-between;
   }
   @media screen and (min-width: 768px) {
     display: flex;
@@ -37,7 +30,7 @@
 .menu-wrap__button {
   @media screen and (max-width: 767px) {
     display: block;
-    margin: 0 0 0 auto;
+    margin: 0;
     padding: 0;
     border: none;
     background-color: transparent;
@@ -71,9 +64,10 @@
 .menu-wrap {
   display: none;
   @media screen and (min-width: 768px) {
+    width: 100%;
     display: flex;
     align-items: center;
-    width: 100%;
+    justify-content: space-between;
 
     background: $primary-bgc;
   }
@@ -90,8 +84,9 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
-    padding: 48px 40px;
-
+    padding-left: 40px;
+    padding-top: 48px;
+    padding-bottom: 48px;
     background: $primary-bgc;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
       0px 1px 3px rgba(0, 0, 0, 0.16);
@@ -106,7 +101,6 @@
 .nav__list {
   display: block;
   @media screen and (max-width: 767px) {
-    margin-bottom: auto;
   }
 
   @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -159,13 +153,13 @@
   display: flex;
   @media screen and (max-width: 767px) {
     flex-direction: column-reverse;
-    margin-bottom: 64px;
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     flex-direction: column;
     margin-left: auto;
   }
   @media screen and (min-width: 1200px) {
+    // flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-left: auto;
@@ -205,44 +199,30 @@
 }
 
 .contacts__link {
-  display: block;
-  font-weight: 500;
-  line-height: 1.16;
-  letter-spacing: 0.02em;
   color: $primary-color-text;
-
   transition: color 250ms var(--hover-timing);
   &:hover,
   &:focus {
     color: $accent-color;
   }
-  @media screen and (max-width: 479px) {
-    font-size: 20px;
-  }
-  @media screen and (min-width: 480px) and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
+    display: block;
+    font-weight: 500;
     font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.02em;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
-    font-size: 12px;
   }
-  @media screen and (min-width: 1200px) {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    line-height: 1.14;
-  }
+  // @media screen and (min-width: 1200px) {
+  //   display: flex;
+  //   align-items: center;
+  // }
 }
 .contacts__link--biggest {
-  @media screen and (max-width: 479px) {
-    font-weight: 500;
-    font-size: 26px;
-    line-height: 1.17;
-    letter-spacing: 0.02em;
-    color: $accent-color;
-  }
-  @media screen and (min-width: 480px) and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
     font-weight: 500;
     font-size: 34px;
     line-height: 1.17;
@@ -264,25 +244,14 @@
 .networks-list {
   display: flex;
   flex-wrap: wrap;
-  @media screen and (max-width: 479px) {
-    margin-right: -10px;
-    margin-top: -10px;
-  }
-
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
 .networks-list__item {
-  width: calc(100% - 2 * 10px) / 2;
-  margin-right: 10px;
-  margin-top: 10px;
-
-  @media screen and (max-width: 479px) {
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
-  }
   &:not(:last-child) {
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: 767px) {
+      margin-right: 10px;
       border-right: 1px solid rgba(33, 33, 33, 0.2);
     }
   }
@@ -295,5 +264,4 @@
   line-height: 1.22;
 
   letter-spacing: 0.02em;
-  text-decoration: none;
 }
