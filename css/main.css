@@ -147,6 +147,9 @@ body {
   }
 }
 
+.menu-wrap__button:focus, .menu-wrap__button:hover {
+  color: #2196f3;
+}
 @media screen and (max-width: 767px) {
   .menu-wrap__button {
     display: block;
@@ -154,29 +157,12 @@ body {
     padding: 0;
     border: none;
     background-color: transparent;
-    z-index: 2;
-  }
-  .menu-wrap__button:focus, .menu-wrap__button:hover {
-    color: #2196f3;
-  }
-  .menu-wrap__button .menu-wrap__off {
-    display: none;
-  }
-  .menu-wrap__button .menu-wrap__on {
-    display: block;
   }
 }
 @media screen and (min-width: 768px) {
   .menu-wrap__button {
     display: none;
   }
-}
-
-.menu-wrap__button.is-open .menu-wrap__on {
-  display: none;
-}
-.menu-wrap__button.is-open .menu-wrap__off {
-  display: block;
 }
 
 .menu-wrap__icon {
@@ -199,6 +185,11 @@ body {
   }
 }
 
+.menu-wrap.is-open .menu-wrap__button--off {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
 @media screen and (max-width: 767px) {
   .menu-wrap.is-open {
     position: absolute;

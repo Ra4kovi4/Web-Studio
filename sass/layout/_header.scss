@@ -35,36 +35,23 @@
   }
 }
 .menu-wrap__button {
+  &:focus,
+  &:hover {
+    color: $accent-color;
+  }
   @media screen and (max-width: 767px) {
     display: block;
     margin: 0 0 0 auto;
     padding: 0;
     border: none;
     background-color: transparent;
-    z-index: 2;
-    &:focus,
-    &:hover {
-      color: $accent-color;
-    }
-    .menu-wrap__off {
-      display: none;
-    }
-    .menu-wrap__on {
-      display: block;
-    }
   }
+
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
-.menu-wrap__button.is-open {
-  .menu-wrap__on {
-    display: none;
-  }
-  .menu-wrap__off {
-    display: block;
-  }
-}
+
 .menu-wrap__icon {
   fill: currentColor;
 }
@@ -80,6 +67,11 @@
 }
 
 .menu-wrap.is-open {
+  .menu-wrap__button--off {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
   @media screen and (max-width: 767px) {
     position: absolute;
     top: 0;
